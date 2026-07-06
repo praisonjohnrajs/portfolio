@@ -358,7 +358,7 @@ footer { border-top:1px solid var(--border);padding:40px 0;position:relative;z-i
 
 /* ====== AI CHAT WIDGET ====== */
 .ai-chat-btn {
-  position: fixed; bottom: 96px; right: 32px; z-index: 500;
+  position: fixed; bottom: 176px; right: 32px; z-index: 500;
   width: 60px; height: 60px;
   background: linear-gradient(135deg, #8b5cf6, var(--accent-2));
   border: none; border-radius: 18px; cursor: pointer;
@@ -380,8 +380,25 @@ footer { border-top:1px solid var(--border);padding:40px 0;position:relative;z-i
   font-size:0.6rem; font-weight:800; color:#070b14;
 }
 
+.whatsapp-float-btn {
+  position: fixed; bottom: 96px; right: 32px; z-index: 500;
+  width: 60px; height: 60px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  border: none; border-radius: 18px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-size: 1.7rem;
+  box-shadow: 0 8px 32px rgba(37,211,102,0.4);
+  transition: var(--transition); animation: whatsappPulse 3s ease-in-out infinite;
+  text-decoration: none;
+}
+@keyframes whatsappPulse {
+  0%,100%{box-shadow:0 8px 32px rgba(37,211,102,0.4)}
+  50%{box-shadow:0 8px 48px rgba(37,211,102,0.7),0 0 0 8px rgba(37,211,102,0.1)}
+}
+.whatsapp-float-btn:hover { transform:translateY(-4px) scale(1.08); }
+
 .ai-chat-window {
-  position: fixed; bottom: 170px; right: 32px; z-index: 500;
+  position: fixed; bottom: 246px; right: 32px; z-index: 500;
   width: 380px; max-height: 560px;
   background: rgba(10,15,30,0.97);
   border: 1px solid rgba(139,92,246,0.3);
@@ -495,9 +512,10 @@ footer { border-top:1px solid var(--border);padding:40px 0;position:relative;z-i
   .info-grid{grid-template-columns:1fr}
   .featured-project{padding:28px}
   section{padding:72px 0}
-  .ai-chat-window{width:calc(100vw - 32px);right:16px;bottom:160px}
-  .ai-chat-btn{right:16px}
-  .back-top{right:16px}
+  .ai-chat-window{width:calc(100vw - 32px);right:16px;bottom:240px}
+  .ai-chat-btn{right:16px;bottom:170px}
+  .whatsapp-float-btn{right:16px;bottom:90px}
+  .back-top{right:16px;bottom:30px}
 }
 @media(max-width:480px){
   .hero-name{font-size:2.2rem}
