@@ -200,9 +200,18 @@ const Home = ({ setCurrentPage }) => {
                 }}>
                   <i className="fa-solid fa-paper-plane"></i> Let's Talk
                 </a>
+                <a 
+                  href={`${import.meta.env.BASE_URL}Praison_John_Raj_CV.pdf`} 
+                  download="Praison_John_Raj_CV.pdf" 
+                  className="btn-secondary"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i className="fa-solid fa-download"></i> Download CV
+                </a>
               </div>
               
-              <div className="hero-stats reveal delay-5" ref={addToRevealRefs} ref={statsRef}>
+              <div className="hero-stats reveal delay-5" ref={(el) => { addToRevealRefs(el); statsRef.current = el; }}>
                 <div className="stat">
                   <span className="stat-num">{stats.exp}+</span>
                   <span className="stat-label">Years Exp</span>
@@ -226,7 +235,7 @@ const Home = ({ setCurrentPage }) => {
               <div className="avatar-container">
                 <div className="avatar-ring-2"></div>
                 <div className="avatar-ring"></div>
-                <img src="/avatar.jpeg" alt="Praison John Raj S - Full Stack Developer" className="avatar-img" />
+                <img src={`${import.meta.env.BASE_URL}avatar.jpeg`} alt="Praison John Raj S - Full Stack Developer" className="avatar-img" />
                 <div className="float-badge float-badge-1"><i className="fa-brands fa-node-js"></i> Node.js</div>
                 <div className="float-badge float-badge-2"><i className="fa-brands fa-react"></i> React.js</div>
                 <div className="float-badge float-badge-3"><i className="fa-brands fa-aws"></i> AWS</div>
@@ -256,6 +265,18 @@ const Home = ({ setCurrentPage }) => {
                 <div className="info-item"><div className="info-label">LinkedIn</div><div className="info-value"><a href="https://in.linkedin.com/in/praison-john-raj-12dec2001" target="_blank" rel="noreferrer">praison-john-raj</a></div></div>
                 <div className="info-item"><div className="info-label">Phone</div><div className="info-value"><a href="tel:+918428273545">+91 84282 73545</a></div></div>
                 <div className="info-item"><div className="info-label">Status</div><div className="info-value" style={{ color: 'var(--accent)' }}>Open to Work</div></div>
+              </div>
+              
+              <div style={{ marginTop: '24px' }}>
+                <a 
+                  href={`${import.meta.env.BASE_URL}Praison_John_Raj_CV.pdf`} 
+                  download="Praison_John_Raj_CV.pdf" 
+                  className="btn-primary"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i className="fa-solid fa-download"></i> Download CV
+                </a>
               </div>
             </div>
             
