@@ -22,7 +22,7 @@ const Home = ({ setCurrentPage }) => {
 
   // --- Typed Text logic ---
   useEffect(() => {
-    const roles = ['Full Stack Developer', 'Node.js Engineer', 'React.js Developer', 'Real-Time Systems Dev', 'Cloud & DevOps Engineer'];
+    const roles = ['Full Stack Developer', 'Python / FastAPI Engineer', 'Node.js Engineer', 'VoIP & Telephony Developer', 'Real-Time Systems Dev'];
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -153,11 +153,10 @@ const Home = ({ setCurrentPage }) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API request
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-    }, 1500);
+    const body = `${formMessage}\n\nFrom: ${formName} <${formEmail}>`;
+    window.location.href = `mailto:praisonjohnraj.s@gmail.com?subject=${encodeURIComponent(formSubject)}&body=${encodeURIComponent(body)}`;
+    setIsSubmitting(false);
+    setSubmitSuccess(true);
   };
 
   // Helper to push refs safely
@@ -185,7 +184,7 @@ const Home = ({ setCurrentPage }) => {
                 <span className="cursor-blink"></span>
               </div>
               <p className="hero-desc reveal delay-3" ref={addToRevealRefs}>
-                Results-driven Full Stack Developer with <strong>3+ years</strong> of experience building modern, scalable web applications. Specialized in real-time systems, telephony platforms, and cloud-native infrastructure using React.js, Node.js & AWS.
+                Results-driven Full Stack Developer with <strong>3.5+ years</strong> of experience shipping enterprise contact-center software end to end. Specialized in real-time voice and messaging (WebRTC, Asterisk, FreeSWITCH), Python/FastAPI and Node.js microservices, and cloud infrastructure on AWS and Kubernetes.
               </p>
               <div className="hero-buttons reveal delay-4" ref={addToRevealRefs}>
                 <a href="#projects" className="btn-primary" onClick={(e) => {
@@ -201,8 +200,8 @@ const Home = ({ setCurrentPage }) => {
                   <i className="fa-solid fa-paper-plane"></i> Let's Talk
                 </a>
                 <a 
-                  href={`${import.meta.env.BASE_URL}Praison_John_Raj_CV.pdf`} 
-                  download="Praison_John_Raj_CV.pdf" 
+                  href={`${import.meta.env.BASE_URL}Praison_John_Raj_CV_Professional.pdf`} 
+                  download="Praison_John_Raj_CV_Professional.pdf" 
                   className="btn-secondary"
                   target="_blank"
                   rel="noreferrer"
@@ -253,10 +252,10 @@ const Home = ({ setCurrentPage }) => {
               <div className="section-tag">About Me</div>
               <h2 className="section-title">Building the <span>Future</span> One Line at a Time</h2>
               <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: '1.85', marginBottom: '20px' }}>
-                I'm a results-driven Full Stack Developer with over <strong style={{ color: 'var(--accent)' }}>3 years</strong> of experience building modern, scalable web applications. Specializing in both frontend and backend development with strong expertise in React.js, Node.js, and PHP.
+                I'm a results-driven Full Stack Developer with over <strong style={{ color: 'var(--accent)' }}>3.5 years</strong> of experience designing and shipping enterprise contact-center software. I work across the stack with Python/FastAPI, Node.js, PHP and React.js, with deep experience in telephony using Asterisk, FreeSWITCH, SIP.js and WebRTC.
               </p>
               <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: '1.85', marginBottom: '32px' }}>
-                My cloud deployment experience includes AWS services such as EC2, S3, Lambda, and API Gateway. Passionate about real-time systems, WebSocket-based applications, and custom CRM/CMS solutions aligned with business goals.
+                I build event-driven microservices with Kafka and Redis, containerize them with Docker, and deploy on Kubernetes and AWS (EC2, S3, Lambda, Route 53, API Gateway) through GitHub Actions CI/CD.
               </p>
               <div className="info-grid">
                 <div className="info-item"><div className="info-label">Location</div><div className="info-value">Chennai, Tamil Nadu</div></div>
@@ -269,8 +268,8 @@ const Home = ({ setCurrentPage }) => {
               
               <div style={{ marginTop: '24px' }}>
                 <a 
-                  href={`${import.meta.env.BASE_URL}Praison_John_Raj_CV.pdf`} 
-                  download="Praison_John_Raj_CV.pdf" 
+                  href={`${import.meta.env.BASE_URL}Praison_John_Raj_CV_Professional.pdf`} 
+                  download="Praison_John_Raj_CV_Professional.pdf" 
                   className="btn-primary"
                   target="_blank"
                   rel="noreferrer"
@@ -286,14 +285,14 @@ const Home = ({ setCurrentPage }) => {
                   <div className="highlight-icon"><i className="fa-solid fa-bolt"></i></div>
                   <div>
                     <div className="highlight-title">Real-Time Systems Expert</div>
-                    <div className="highlight-text">Built live dashboards, WebSocket apps & Asterisk telephony platforms handling thousands of concurrent connections.</div>
+                    <div className="highlight-text">Built live supervisor dashboards, a WebRTC softphone and telephony platforms on Asterisk and FreeSWITCH, using WebSockets, Redis Pub/Sub and Kafka.</div>
                   </div>
                 </div>
                 <div className="about-highlight">
                   <div className="highlight-icon"><i className="fa-brands fa-aws"></i></div>
                   <div>
                     <div className="highlight-title">Cloud Infrastructure</div>
-                    <div className="highlight-text">Hands-on experience with AWS EC2, S3, Lambda, Route 53 & API Gateway for secure, scalable deployments.</div>
+                    <div className="highlight-text">Docker, Kubernetes and GitHub Actions CI/CD, with AWS EC2, S3, Lambda, Route 53 & API Gateway for secure, scalable deployments.</div>
                   </div>
                 </div>
                 <div className="about-highlight">
@@ -307,7 +306,7 @@ const Home = ({ setCurrentPage }) => {
                   <div className="highlight-icon"><i className="fa-solid fa-layer-group"></i></div>
                   <div>
                     <div className="highlight-title">Full Stack Proficiency</div>
-                    <div className="highlight-text">End-to-end development from React.js frontends to Node.js/PHP backends with MongoDB, MySQL & Redis.</div>
+                    <div className="highlight-text">End-to-end development from React.js frontends to Python/FastAPI, Node.js and PHP backends with MongoDB, MySQL & Redis.</div>
                   </div>
                 </div>
               </div>
@@ -338,7 +337,7 @@ const Home = ({ setCurrentPage }) => {
               <div className="cat-icon"><i className="fa-solid fa-server"></i></div>
               <div className="cat-title">Backend</div>
               <div className="skill-pills">
-                <span className="pill">Node.js</span><span className="pill">Express.js</span><span className="pill">PHP</span><span className="pill">Python</span><span className="pill">Asterisk</span><span className="pill">Apache2</span><span className="pill">Nginx</span>
+                <span className="pill">Node.js</span><span className="pill">Express.js</span><span className="pill">PHP</span><span className="pill">Python</span><span className="pill">Asterisk</span><span className="pill">Apache2</span><span className="pill">Nginx</span><span className="pill">FastAPI</span><span className="pill">SQLAlchemy</span><span className="pill">FreeSWITCH</span><span className="pill">Kafka</span>
               </div>
             </div>
             
@@ -354,7 +353,7 @@ const Home = ({ setCurrentPage }) => {
               <div className="cat-icon"><i className="fa-brands fa-aws"></i></div>
               <div className="cat-title">Cloud & DevOps</div>
               <div className="skill-pills">
-                <span className="pill">AWS EC2</span><span className="pill">S3</span><span className="pill">Lambda</span><span className="pill">Route 53</span><span className="pill">API Gateway</span><span className="pill">Docker</span><span className="pill">PM2</span>
+                <span className="pill">AWS EC2</span><span className="pill">S3</span><span className="pill">Lambda</span><span className="pill">Route 53</span><span className="pill">API Gateway</span><span className="pill">Docker</span><span className="pill">PM2</span><span className="pill">Kubernetes</span><span className="pill">GitHub Actions</span>
               </div>
             </div>
             
@@ -370,7 +369,7 @@ const Home = ({ setCurrentPage }) => {
               <div className="cat-icon"><i className="fa-solid fa-chart-line"></i></div>
               <div className="cat-title">Specializations</div>
               <div className="skill-pills">
-                <span className="pill">Real-time Apps</span><span className="pill">CRM Systems</span><span className="pill">Call Center</span><span className="pill">VoIP/SIP</span>
+                <span className="pill">Real-time Apps</span><span className="pill">CRM Systems</span><span className="pill">Call Center</span><span className="pill">VoIP/SIP</span><span className="pill">IVR</span><span className="pill">Salesforce CTI</span><span className="pill">Microservices</span>
               </div>
             </div>
           </div>
@@ -381,6 +380,8 @@ const Home = ({ setCurrentPage }) => {
               { name: 'Node.js', val: 92 },
               { name: 'MongoDB', val: 85 },
               { name: 'AWS Cloud', val: 82 },
+              { name: 'Python / FastAPI', val: 80 },
+              { name: 'FreeSWITCH / Asterisk', val: 85 },
               { name: 'PHP', val: 80 },
               { name: 'MySQL / Redis', val: 88 }
             ].map((bar, idx) => (
@@ -425,14 +426,18 @@ const Home = ({ setCurrentPage }) => {
                   <li>Working as a Full Stack Developer in a leading call center software solutions company, focusing on telephony and real-time communication platforms.</li>
                   <li>Integrated and maintained Asterisk-based calling systems, contributing to call flow automation, API-driven interactions, and call event handling.</li>
                   <li>Developed web-based softphone dialing panels using SIP.js and WebRTC, enabling agents to call directly from the CRM without external softphone software.</li>
-                  <li>Played a key role in building a centralized call center platform (ConnectHub), consolidating CRM, reporting, live monitoring, user management, and IVR functionalities.</li>
+                  <li>Lead full-stack development of ConnectHub, a centralized contact-center platform consolidating CRM, reporting, live monitoring, user management, and IVR functionalities.</li>
+                  <li>Architected 25+ Python/FastAPI and Node.js microservices, containerized with Docker and deployed on Kubernetes with GitHub Actions pipelines.</li>
+                  <li>Designed event-driven processing with Apache Kafka for call events, conference handling, SMS/WhatsApp delivery reports and billing.</li>
+                  <li>Sole developer of the Emergency IVR & Multichannel Alert System, built on Kafka and FreeSWITCH ESL with multilingual Lua IVR flows.</li>
+                  <li>Delivered CRM telephony integrations including Salesforce CTI click-to-call and Freshworks.</li>
                   <li>Implemented real-time technologies like WebSocket, Redis Pub/Sub, and Asterisk AMI for live updates across dashboards and admin panels.</li>
                   <li>Implemented secure user authentication including JWT, 2FA/MFA, and role-based session management for robust application security.</li>
                   <li>Managed Linux server environments using Nginx, Apache2, and AWS cloud services (EC2, S3, Route 53) for deployment and maintenance.</li>
                   <li>Collaborated with cross-functional teams to ensure secure, scalable, and maintainable solutions using React.js, Node.js, MongoDB, and MySQL.</li>
                 </ul>
                 <div className="exp-tags">
-                  {['React.js', 'Node.js', 'Asterisk', 'SIP.js', 'WebRTC', 'WebSocket', 'Redis', 'MongoDB', 'MySQL', 'AWS', 'Docker', 'JWT'].map((t, i) => (
+                  {['Python', 'FastAPI', 'React.js', 'Node.js', 'Asterisk', 'FreeSWITCH', 'SIP.js', 'WebRTC', 'Kafka', 'Redis', 'MongoDB', 'MySQL', 'AWS', 'Docker', 'Kubernetes', 'JWT'].map((t, i) => (
                     <span className="exp-tag" key={i}>{t}</span>
                   ))}
                 </div>
@@ -457,25 +462,25 @@ const Home = ({ setCurrentPage }) => {
             <div className="featured-grid">
               <div>
                 <h3 className="featured-title">ConnectHub</h3>
-                <p className="featured-desc">Enterprise-grade real-time communication and call center management platform. ConnectHub unifies CRM, live agent monitoring, IVR management, and Asterisk-based telephony into a single powerful dashboard — enabling call centers to operate with maximum efficiency and real-time visibility.</p>
+                <p className="featured-desc">Enterprise-grade real-time communication and call center management platform. ConnectHub unifies CRM, live agent monitoring, IVR management, and Asterisk and FreeSWITCH telephony into a single powerful dashboard — enabling call centers to operate with maximum efficiency and real-time visibility.</p>
                 <ul className="featured-features">
                   <li><i className="fa-solid fa-check-circle"></i> Real-time agent dashboard with live call tracking across queues and locations</li>
                   <li><i className="fa-solid fa-check-circle"></i> Integrated browser-based WebRTC softphone panels utilizing SIP.js for direct call execution</li>
                   <li><i className="fa-solid fa-check-circle"></i> WebSocket + Redis Pub/Sub powered live status updates without page refresh</li>
                   <li><i className="fa-solid fa-check-circle"></i> Asterisk AMI integration for complete call flow control and IVR management</li>
+                  <li><i className="fa-solid fa-check-circle"></i> 25+ Python/FastAPI and Node.js microservices on Docker and Kubernetes, with Kafka event processing</li>
                   <li><i className="fa-solid fa-check-circle"></i> Interactive donut charts showing agent states: On Call, Ready, Not Ready, Logout</li>
                   <li><i className="fa-solid fa-check-circle"></i> Call listening and barging functionality for supervisor monitoring</li>
                   <li><i className="fa-solid fa-check-circle"></i> JWT + 2FA/MFA authentication with role-based access control</li>
                   <li><i className="fa-solid fa-check-circle"></i> Multi-language and location-wise agent grouping with live call counts</li>
                 </ul>
                 <div className="featured-tags">
-                  {['React.js', 'Node.js', 'Asterisk', 'SIP.js', 'WebRTC', 'WebSocket', 'Redis', 'MongoDB', 'MySQL', 'JWT', 'Docker', 'AWS'].map((tag, idx) => (
+                  {['React.js', 'FastAPI', 'Node.js', 'Asterisk', 'FreeSWITCH', 'SIP.js', 'WebRTC', 'Kafka', 'Redis', 'MongoDB', 'MySQL', 'Docker', 'Kubernetes', 'AWS'].map((tag, idx) => (
                     <span className="featured-tag" key={idx}>{tag}</span>
                   ))}
                 </div>
                 <div className="featured-buttons">
-                  <a href="https://github.com/PraisonSWDP" target="_blank" rel="noreferrer" className="btn-primary" id="connecthub-github"><i className="fa-brands fa-github"></i> View on GitHub</a>
-                  <a href="#contact" className="btn-secondary" id="connecthub-demo" onClick={(e) => {
+                  <a href="#contact" className="btn-primary" id="connecthub-demo" onClick={(e) => {
                     e.preventDefault();
                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                   }}><i className="fa-solid fa-envelope"></i> Request Demo</a>
@@ -509,12 +514,18 @@ const Home = ({ setCurrentPage }) => {
 
           {/* Other Projects */}
           <div className="projects-grid">
+            <div className="project-card reveal" ref={addToRevealRefs}>
+              <div className="project-icon"><i className="fa-solid fa-tower-broadcast"></i></div>
+              <div className="project-title">Emergency IVR & Multichannel Alert System</div>
+              <p className="project-desc">Sole developer. High-volume emergency outbound calling: a Kafka consumer originates calls through FreeSWITCH ESL across carrier gateways, with multilingual Lua IVR flows, DTMF capture, on-demand text-to-speech, SMS and WhatsApp alerts, and call recordings on AWS S3.</p>
+              <div className="project-tech"><span className="tech-chip">FastAPI</span><span className="tech-chip">Kafka</span><span className="tech-chip">FreeSWITCH</span><span className="tech-chip">Lua</span><span className="tech-chip">AWS S3</span><span className="tech-chip">Kubernetes</span></div>
+            </div>
+
             <div className="project-card reveal delay-1" ref={addToRevealRefs}>
               <div className="project-icon"><i className="fa-solid fa-network-wired"></i></div>
               <div className="project-title">Switch Automation System</div>
               <p className="project-desc">Comprehensive solution to streamline and automate network switch management. Features centralized control, real-time monitoring, automated workflows and bulk device operations.</p>
               <div className="project-tech"><span className="tech-chip">Node.js</span><span className="tech-chip">React.js</span><span className="tech-chip">MongoDB</span><span className="tech-chip">WebSocket</span></div>
-              <a href="https://github.com/PraisonSWDP" target="_blank" rel="noreferrer" className="project-link" id="switch-auto-link"><i className="fa-brands fa-github"></i> View Project <i className="fa-solid fa-arrow-right"></i></a>
             </div>
             
             <div className="project-card reveal delay-2" ref={addToRevealRefs}>
@@ -522,7 +533,6 @@ const Home = ({ setCurrentPage }) => {
               <div className="project-title">SIP Talk Time Tracker</div>
               <p className="project-desc">Tracking system to monitor agent talk time across multiple SIP servers. Provides real-time tracking integrated with Asterisk-based SIP servers, customized for billing.</p>
               <div className="project-tech"><span className="tech-chip">Asterisk</span><span className="tech-chip">Node.js</span><span className="tech-chip">MySQL</span><span className="tech-chip">Redis</span></div>
-              <a href="https://github.com/PraisonSWDP" target="_blank" rel="noreferrer" className="project-link" id="sip-tracker-link"><i className="fa-brands fa-github"></i> View Project <i className="fa-solid fa-arrow-right"></i></a>
             </div>
             
             <div className="project-card reveal delay-3" ref={addToRevealRefs}>
@@ -530,7 +540,6 @@ const Home = ({ setCurrentPage }) => {
               <div className="project-title">2FA/MFA Auth System</div>
               <p className="project-desc">Secure Two-Factor Authentication system with QR-code-based registration for Microsoft and Google Authenticator apps. Implements TOTP with JWT.</p>
               <div className="project-tech"><span className="tech-chip">Node.js</span><span className="tech-chip">JWT</span><span className="tech-chip">TOTP</span><span className="tech-chip">React.js</span></div>
-              <a href="https://github.com/PraisonSWDP" target="_blank" rel="noreferrer" className="project-link" id="mfa-auth-link"><i className="fa-brands fa-github"></i> View Project <i className="fa-solid fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -665,8 +674,8 @@ const Home = ({ setCurrentPage }) => {
               ) : (
                 <div id="form-success" style={{ textAlign: 'center', padding: '40px' }}>
                   <div style={{ fontSize: '3rem', marginBottom: '16px' }}>🎉</div>
-                  <div style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: '8px', color: 'var(--accent)' }}>Message Sent!</div>
-                  <div style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Thanks for reaching out. I'll get back to you within 24 hours.</div>
+                  <div style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: '8px', color: 'var(--accent)' }}>Almost done!</div>
+                  <div style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Your email app should now be open with your message. Press send there, or email praisonjohnraj.s@gmail.com directly.</div>
                 </div>
               )}
             </div>

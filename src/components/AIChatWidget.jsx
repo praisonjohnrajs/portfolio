@@ -5,9 +5,9 @@ const KB = {
     "Hi there! 👋 I'm Praison's AI assistant. Ask me anything about his skills, projects, or experience! You can also toggle the Speaker icon for voice replies.",
     "Hello! I'm Praison's portfolio AI. What would you like to know today? Feel free to speak your questions using the Mic icon!"
   ],
-  name: ["I'm Praison John Raj S — a Full Stack Developer based in Chennai, Tamil Nadu with 3+ years of experience."],
+  name: ["I'm Praison John Raj S — a Full Stack Developer based in Chennai, Tamil Nadu with 3.5+ years of experience."],
   skills: [
-    "Praison is skilled in:\n🔹 Frontend: React.js, SIP.js, WebRTC, JavaScript, HTML5, CSS3, Socket.io\n🔹 Backend: Node.js, Express.js, PHP, Python\n🔹 Databases: MongoDB, MySQL, Redis\n🔹 Cloud: AWS EC2, S3, Lambda, Route 53\n🔹 Tools: Docker, Nginx, Linux, Git"
+    "Praison is skilled in:\n🔹 Frontend: React.js, SIP.js, WebRTC, JavaScript, HTML5, CSS3, Socket.io\n🔹 Backend: Python, FastAPI, Node.js, Express.js, PHP\n🔹 Telephony: Asterisk, FreeSWITCH, SIP, IVR\n🔹 Data & Messaging: MongoDB, MySQL, Redis, Kafka\n🔹 Cloud: AWS, Docker, Kubernetes, GitHub Actions\n🔹 Tools: Nginx, Linux, Git"
   ],
   connecthub: [
     "ConnectHub is Praison's flagship project — an enterprise-grade real-time call center management platform! 🚀\n\nKey features:\n⚡ Live agent monitoring dashboard\n📞 Integrated WebRTC softphone via SIP.js (direct browser calling)\n📡 WebSocket + Redis Pub/Sub real-time updates\n📞 Asterisk AMI telephony integration\n🤖 Built-in AI assistant\n🔒 JWT + 2FA/MFA security\n📊 Interactive donut charts for agent states"
@@ -19,10 +19,10 @@ const KB = {
     "Yes! Praison built an AI assistant inside ConnectHub — his flagship call center platform. It helps agents and supervisors get instant answers, automate queries, and improve workflow. That's why this portfolio also has one! 🤖✨"
   ],
   experience: [
-    "Praison works at Pulse Telesystems Private Limited as a Software Developer since April 2023.\n\nHe builds:\n✅ Real-time call center platforms\n✅ Asterisk telephony systems\n✅ WebSocket dashboards\n✅ CRM & IVR solutions\n✅ AWS cloud infrastructure"
+    "Praison works at Pulse Telesystems Private Limited as a Software Developer since April 2023.\n\nHe builds:\n✅ Real-time call center platforms\n✅ Asterisk and FreeSWITCH telephony systems\n✅ Python/FastAPI and Node.js microservices\n✅ WebSocket dashboards\n✅ CRM & IVR solutions\n✅ AWS cloud infrastructure"
   ],
   projects: [
-    "Praison has built:\n\n⭐ ConnectHub — Featured real-time call center platform with AI assistant\n🌐 Switch Automation — Network switch management system\n⏱️ SIP Talk Time Tracker — Asterisk agent billing tracker\n🔒 2FA/MFA System — TOTP + QR code authenticator"
+    "Praison has built:\n\n⭐ ConnectHub — Featured real-time call center platform with AI assistant\n🚨 Emergency IVR — Sole developer of a Kafka and FreeSWITCH emergency calling and alert system\n🌐 Switch Automation — Network switch management system\n⏱️ SIP Talk Time Tracker — Asterisk agent billing tracker\n🔒 2FA/MFA System — TOTP + QR code authenticator"
   ],
   education: [
     "Praison's education:\n🎓 MCA — Anna University (2023–2024)\n🎓 BCS — Madurai Kamaraj University (2019–2022)"
@@ -31,7 +31,7 @@ const KB = {
     "You can reach Praison at:\n📧 praisonjohnraj.s@gmail.com\n📱 +91 84282 73545\n💼 LinkedIn: praison-john-raj-12dec2001\n🐙 GitHub: github.com/PraisonSWDP\n📍 Chennai, Tamil Nadu"
   ],
   hire: [
-    "Praison is currently open to new opportunities! 🟢\n\nHe's looking for:\n✅ Full Stack Developer roles\n✅ Node.js / React.js positions\n✅ Real-time systems projects\n✅ Cloud / AWS roles\n\nDrop him an email at praisonjohnraj.s@gmail.com"
+    "Praison is currently open to new opportunities! 🟢\n\nHe's looking for:\n✅ Full Stack Developer roles\n✅ Python / Node.js / React.js positions\n✅ VoIP and telephony roles\n✅ Real-time systems projects\n✅ Cloud / AWS roles\n\nDrop him an email at praisonjohnraj.s@gmail.com"
   ],
   aws: [
     "Praison has hands-on AWS experience with:\n☁️ EC2 — Server management\n📦 S3 — File storage\n⚡ Lambda — Serverless functions\n🌐 Route 53 — DNS management\n🔗 API Gateway — REST API management"
